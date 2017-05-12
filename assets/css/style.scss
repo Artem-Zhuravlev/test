@@ -51,6 +51,8 @@
 		color: #fff;
 	}
 }
+
+//carousel styles
 .owl{
 	&-nav{
 		position: absolute;
@@ -76,5 +78,28 @@
 		color: transparent;
 		border-radius: 50%;
 		background: #fff url(../img/arrow-right.png)no-repeat center center;
+	}
+}
+
+// team 
+.team{
+	padding-top: 90px;
+	overflow: hidden;
+	h2{
+		padding-bottom: 128px;
+		color: #4e525d;
+		text-align: center
+	}
+	&__col{
+		float: left;
+		width: 25%;
+	}
+	&__profile{
+		display: block;
+		width: 200px;
+		height: 200px;
+		border-radius: 50%;
+		text-align: center;
+		background-color: #eeeef0;
 	}
 }
