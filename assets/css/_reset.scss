@@ -1,0 +1,62 @@
+@import "_variables.scss";
+
+body{
+    width: 100%;
+    margin: 0 auto;
+    font-size: $generalSize;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/*General-reset*/
+*{
+    -webkit-box-sizing: border-box ;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+h1, h2, h3, h4, h5, h6 ,p{
+    margin: 0;
+    padding: 0;
+}
+ul, ol{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+a{
+    &:visited,
+    &:link,
+    &:active{
+        text-decoration:none;
+        color: #000;
+    }
+}
+
+a{
+    &:hover,
+    &:focus{
+        text-decoration: none;
+    }
+}
+img{
+    max-width: 100%;
+    border: none;
+    outline: none;
+}
+div:focus{
+    outline: none;
+}
+input, button{
+    outline: none;
+    border:none;
+}
+textarea{
+    resize: vertical;
+}
+button{
+    background-color: transparent;
+}
+
+.container{
+    margin: auto;
+    width: $containerWidth;
+}

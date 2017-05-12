@@ -1,3 +1,37 @@
-html, body {
-	
+@import "_variables.scss";
+@import "_buttons.scss";
+@import "_fonts.scss";
+@import "_reset.scss";
+
+
+//header top 
+.header-top{
+	&__col{
+		display: inline-block;
+		vertical-align: top;
+		width: 49%;
+	}
+	&__logo{
+		padding-top: 30px;
+		a{
+			display: inline-block
+		}
+	}
+	&__nav{
+		text-align: right;
+		li{
+			display: inline-block;
+		}
+		a{
+			display: block;
+			padding: 0 15px;
+			font-size: $navSize;
+			line-height: 6.7;
+			transition: .5s;
+			&:hover{
+				color: $navHover;
+				border-bottom: 3px solid $navHover;
+			}
+		}
+	}
 }

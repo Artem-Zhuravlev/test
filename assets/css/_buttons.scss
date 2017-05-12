@@ -1,0 +1,38 @@
+.btn__big{
+	padding: 0.616em 1.771em;
+	font-size: $bigBtnSize;
+	color: $bigBtnColor;
+	border: 3px solid $borderColor;
+	border-radius: $bigBtnRadius;
+	transition: .5s;
+	cursor: pointer;
+	&:hover{
+		background-color: $bigBtnColor;
+		color: #000;
+	}
+}
+
+.btn__small{
+	padding: 0.589em 2.4455em;
+	font-size: $smallBtnSize;
+	font-weight: 600;
+	color: #fff;
+	border-radius: $smallBtnRadius;
+	cursor: pointer;
+	&-blue{
+		background-color: $smallBgBlue;
+		transition: .5s;
+		&:hover{
+			color: #000;
+			background-color: lighten($smallBgBlue, 20%);
+		}
+	}
+	&-gray{
+		background-color: $smallBgGray;
+		transition: .5s;
+		&:hover{
+			color: #000;
+			background-color: lighten($smallBgGray, 20%);
+		}
+	}
+}
