@@ -15,8 +15,7 @@ gulp.task('sass', function () {
 
 gulp.task('js', function() {
     gulp.src([
-                './assets/js/jquery-2.1.4.js',
-                './assets/js/script.js'
+            './assets/js/script.js'
         ]) 
         .pipe(concat('min.js')) 
         .pipe(uglify()) 
