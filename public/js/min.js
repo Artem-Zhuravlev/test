@@ -4,4 +4,5 @@ $(document).ready(function() {
 		nav: true,
 		dots: false
 	});
+	$("#commentForm").validate();
 })
