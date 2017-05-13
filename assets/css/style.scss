@@ -83,7 +83,7 @@
 
 // team 
 .team{
-	padding-top: 90px;
+	padding: 90px 0;
 	overflow: hidden;
 	h2{
 		padding-bottom: 128px;
@@ -92,14 +92,48 @@
 	}
 	&__col{
 		float: left;
+		padding: 0 11px;
 		width: 25%;
 	}
 	&__profile{
 		display: block;
+		margin: 0 auto;
+
 		width: 200px;
 		height: 200px;
 		border-radius: 50%;
 		text-align: center;
 		background-color: #eeeef0;
+		background-position: center center;
+		transition: 1s;
+		cursor: pointer;
+		&:hover{
+			background-color: #eeeef0;
+			background-image: url(../img/plus.png);
+			background-repeat: no-repeat;
+			background-position: center center;
+		}
 	}
+	&__desc{
+		padding-top: 70px;
+		text-align: center;
+		h4{
+			color: $teamFontColor;
+		}
+		h6{
+			margin-bottom: 35px;
+			font-size: 1em;
+			color: $teamFontColor;
+		}
+		p{
+			color: $teamFontColor;
+			line-height: 1.5;
+		}
+	}
+}
+
+// servise styles
+.service{
+	@extend .padding;
+	background-color: #f1f1f1;
 }
