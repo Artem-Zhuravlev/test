@@ -136,4 +136,44 @@
 .service{
 	@extend .padding;
 	background-color: #f1f1f1;
+	&__row{
+		overflow: hidden
+	}
+	&__col{
+		width: 30.33333%;
+		float: left;
+		text-align: center;
+		border: 1px solid #f1f1f1;
+		&-center{
+			margin: 0 30px;
+		}
+	}
+	&__title{
+		color: $titleColor;
+		line-height: 2.9;
+		&-dark{
+			background: $titleDark;
+		}
+		&-light{
+			background: $titleLight;
+		}
+	}
+	&__subtitle{
+		font-size: 1.429em;
+		line-height: 3.5;
+		color: $titleDark;
+		background-color: $subtitleColor;
+	}
+	&__nav{
+		background-color: $bigBtnColor;
+		li{
+			color: $serviceNavColor;
+			border-bottom: 1px solid #ecf0f1;
+			line-height: 3.2;
+		}
+	}
+	&__footer{
+		padding: 29px 0;
+		background-color: $subtitleColor;
+	}
 }
