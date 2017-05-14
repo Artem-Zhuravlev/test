@@ -4,5 +4,17 @@ $(document).ready(function() {
 		nav: true,
 		dots: false
 	});
-	$("#commentForm").validate();
-})
+	$('a[href*="#"]').click(function(){
+		var target = jQuery(this).attr('href');
+		$('html, body').animate({scrollTop: jQuery(target).offset().top - 0}, 500);
+		return false;
+   	});
+	$(window).scroll(function(){
+  		if ($(this).scrollTop() > 50) {
+   			$('.header-top').addClass('scroll');
+  		}else{
+   			$('.header-top').removeClass('scroll');
+  		}
+ 	});
+});
+

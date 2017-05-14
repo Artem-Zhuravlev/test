@@ -7,16 +7,18 @@
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/owl.carousel.css">
+	<link rel="stylesheet" href="css/remodal.css">
+	<link rel="stylesheet" href="css/remodal-default-theme.css">
 	<link rel="stylesheet" href="css/style.css">
 	<title>Document</title>
 </head>
 <body>
-	<header class="header">
+	<header class="header" id="header">
 		<div class="header-top">
 			<div class="container">
 				<div class="header-top__col">
 					<div class="header-top__logo">
-						<a href="#">
+						<a href="#header">
 							<img src="img/header__logo.png" alt="header-logo">
 						</a>
 					</div>
@@ -24,12 +26,12 @@
 				<div class="header-top__col">
 					<nav class="header-top__nav">
 						<ul>
-							<li><a href="#">Home</a></li>
-							<li><a href="#">Service</a></li>
-							<li><a href="#">Portfolio</a></li>
-							<li><a href="#">Team</a></li>
-							<li><a href="#">Blog</a></li>
-							<li><a href="#">Contact</a></li>
+							<li><a href="#header">Home</a></li>
+							<li><a href="#service">Service</a></li>
+							<li><a href="#team">Portfolio</a></li>
+							<li><a href="#team">Team</a></li>
+							<li><a href="#footer">Blog</a></li>
+							<li><a href="#footer">Contact</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -183,25 +185,38 @@
 					</nav>
 				</div>
 				<div class="footer__col">
-					<form action="" id="commentForm" method="get">
-						<div class="footer__field">
-							<input type="text" name="username" minlength="2" placeholder="Name" required>
+					<form action="">
+						<div class="footer__form">
+							<div class="field">
+								<input type="text" name="name" placeholder="Name" class="required">
+							</div>
+							<div class="field">
+								<input type="text" name="e-mail" type="email" placeholder="Email" class="required">
+							</div>
+							<div class="field__area">
+								<textarea name="text" placeholder="Message"></textarea>
+							</div>
+							<input type="submit" name="submit_btn" value="Send" class="preorder-btn checkout">
 						</div>
-						<div class="footer__field">
-							<input type="text" name="email" type="email" placeholder="Email" required>
-						</div>
-						<div class="footer__field-comment">
-							<textarea name="comment"  placeholder="Message" required></textarea>
-						</div>
-						<input class="submit" type="submit" value="Send">
 					</form>
 				</div>
 			</div>
 		</div>
 	</footer>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+	<!-- Modal start -->
+		<div class="remodal small-modal send remodal-is-initialized remodal-is-opened" data-remodal-id="gallary-send" tabindex="-1">
+		    <button data-remodal-action="close" class="remodal-close"></button>
+		    <p>
+		        Спасибо, заявка принята
+		    </p>
+		</div>
+	<!-- Modal end -->
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
 	<script src="js/owl.carousel.min.js"></script>
-	<script src="js/jquery.validate.min.js"></script>
+	<script src="js/remodal.js"></script>
+	<script src="js/validate.js"></script>
 	<script src="js/min.js"></script>
 </body>
 </html>
