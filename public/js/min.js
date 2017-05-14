@@ -1,8 +1,20 @@
 $(document).ready(function() {
 	$('.owl-carousel').owlCarousel({
-		items: 1,
 		nav: true,
-		dots: false
+		loop: true,
+		smartSpeed: 1550,
+		 responsive:{
+	        0:{
+	        	items: 1,
+	            nav:false,
+	            dots: true
+	        },
+	        767:{
+	            items:1,
+	            nav:true,
+	            dots: false
+	        }
+	    }
 	});
 	$('a[href*="#"]').click(function(){
 		var target = jQuery(this).attr('href');
@@ -16,5 +28,10 @@ $(document).ready(function() {
    			$('.header-top').removeClass('scroll');
   		}
  	});
+ 	$(function(){
+		$('#menu').slicknav({
+			label: ""
+		});
+	});
 });
 

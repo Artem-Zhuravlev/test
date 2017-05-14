@@ -19,7 +19,8 @@
 	}
 	&__logo{
 		padding-top: 30px;
-		transition: .5s;
+		transition: .3s;
+		-webkit-transition: .3s;
 		a{
 			display: inline-block
 		}
@@ -34,7 +35,8 @@
 			padding: 0 15px;
 			font-size: $navSize;
 			line-height: 6.7;
-			transition: .5s;
+			transition: .3s;
+			-webkit-transition: .3s;
 			border-bottom: 3px solid #fff;
 			&:hover{
 				color: $navHover;
@@ -44,7 +46,7 @@
 	}
 }
 .header-top.scroll{
-	box-shadow: 1px 1px 10px #666;
+	box-shadow: 1px 1px 10px #333;
 	.header-top__nav{
 		a{
 			line-height: 4;
@@ -56,6 +58,7 @@
 }
 // header-bottom 
 .header-bottom{
+	position: relative;
 	margin-top: 103px;
 	&__col{
 		padding: 120px 0 145px 0;
@@ -69,6 +72,7 @@
 		color: #fff;
 	}
 }
+
 
 //carousel styles
 .owl{
@@ -124,6 +128,7 @@
 		background-color: #eeeef0;
 		background-position: center center;
 		transition: 1s;
+		-webkit-transition: 1s;
 		cursor: pointer;
 		&:hover{
 			background-color: #eeeef0;
@@ -242,6 +247,7 @@
 			color: #000;
 			resize: none;
 			border-radius: 3px;
+			outline: none;
 		}
 		input[type="submit"]{
 			float: right;
@@ -253,6 +259,7 @@
 			border-radius: 3px;
 			cursor: pointer;
 			transition:.5s;
+			-webkit-transition: .5s;
 			&:hover{
 				background-color: lighten(#49cbcd, 10%);
 			}
@@ -297,6 +304,7 @@
 			height: 42px;
 			border-radius: 50%;
 			transition: .5s;
+			-webkit-transition: .5s;
 		}
 		i{
 			display: block;
@@ -333,9 +341,151 @@
 .wrong-form{
 	border: 1px solid red;
 }
-.remodal-wrapper{
-	margin: auto;
+.remodal{
+	&-wrapper{
+		margin: auto;
+	}
+	&-close{
+		right: 20px;
+	}
 }
-.remodal-close{
-	right: 20px;
+// adaptive styles
+.slicknav_menu {
+	display:none;
+}
+#menu {
+	display:none;
+}
+@media(max-width: 1200px) {
+	.container{
+		width: 990px;
+	}
+	.service{
+		&__col{
+			margin: 0 22px;
+			&-center{
+				margin: auto;
+			}
+		}
+	}
+	.footer h2, .team h2{
+		padding-bottom: 55px;
+	}
+}
+
+@media(max-width: 992px) {
+	.container{
+		width: 768px;
+		padding: 0 15px;
+	}
+	.header-top{
+		&__nav{
+			a{
+				padding: 0 6px;
+			}
+		}
+		&__col{
+			&:first-child{
+				width: 20%
+			}
+			&:last-child{
+				width: 78%;
+			}
+		}
+	}
+	.service{
+		&__col{
+			margin: 0 11px;
+		}
+	}
+	.team{
+		&__col{
+			margin-bottom: 20px;
+			width: 50%;
+		}
+	}
+
+} 
+
+
+@media(max-width: 767px) {
+	.container{
+		width: 100%;
+	}
+	.slicknav_menu {
+		display:block;
+		position: fixed;
+		width: 100%;
+		top: 0;
+		left: 0;
+		z-index: 9999999;
+		background-color: #007c84;
+		a{
+			text-align: center;
+			font-size: 20px;
+			text-transform: uppercase;
+			color: #fff;
+		}
+	}
+	.header-top{
+		display: none;
+	}
+	.owl-carousel.owl-loaded{
+		margin-top: 0;
+	}
+	.owl{
+		&-dots{
+			position: absolute;
+			bottom: 20px;
+			left: 0;
+			right: 0;
+			text-align: center;
+		}
+		&-dot{
+			display: inline-block;
+			margin: 0 8px;
+			width: 20px;
+			height: 20px;
+			border-radius: 50%;
+			border: 1px solid #fff;
+			background: transparent;
+			&.active{
+				border: 1px solid transparent;
+				background: #fff;
+			}
+		}
+	}
+	.service{
+		&__col{
+			margin: 0 auto 30px auto;
+			width: 100%;
+		}
+	}
+	.footer{
+		&__social{
+			li{
+				margin: 0 15px;
+			}
+		}
+		&__col{
+			margin-bottom: 30px;
+			width: 100%;
+			text-align: center;
+			input[type=submit]{
+				width: 100%;
+			}
+			input[name=e-mail],
+			input[name=name]{
+				width: 100%;
+			}
+		}
+	}
+	.field{
+		width: 100%;
+	}
+}
+@media(max-width: 480px) {
+	.team__col{
+		width: 100%;
+	}
 }
